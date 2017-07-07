@@ -1,0 +1,315 @@
+/* SASS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Acme|Anton|Francois+One|Luckiest+Guy|Oswald|Pacifico|Sigmar+One|Open+Sans')
+
+
+$color-creamGray:#e8ddd1
+$color-lightGray:#999
+$color-red:#d9534f
+$color-pink:#f7a293
+$color-darkGray:#333
+$font-headline: Pacifico, cursive
+$font-p: Acme, sans-serif
+
+@mixin rotate($rotate) 
+	-webkit-transform: rotate($rotate)
+	-moz-transform: rotate($rotate)
+	-ms-transform: rotate($rotate)
+	-o-transform: rotate($rotate)
+	transform: rotate($rotate)
+
+
+/*GENERAL*/
+
+
+*
+	box-sizing: border-box
+	outline: none
+	text-decoration: none
+	outline-offset: 0
+	&:hover, &:visited, &:active, &:focus
+		outline: none
+		text-decoration: none
+		outline-offset: 0
+		
+body, ul, ol, p
+	margin: 0
+	padding: 0
+
+
+
+body 
+	text-align: center  
+	height: 100% 
+	
+
+
+.row:after, .row:before
+	content: ""
+	display: table
+	
+.row:after
+	clear: both
+	
+
+h1, h2
+	font-family: $font-headline
+	
+h2
+	margin-top: 40px
+		
+.box
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	h1
+		flex: 100%
+		margin-bottom: 10vh
+		font-size: 3.3em
+
+
+.box50, .photo50
+	flex: 1
+
+
+.container
+	width: 1300px
+	margin-top: 3vh
+	min-height: calc(100vh - 572px)
+
+
+/*PHOTO*/
+
+.photo50 
+	img
+		width: 400px
+		height: auto
+
+/*SEARCH*/
+
+.btn, .btn-danger
+	border-radius: 0px
+	margin-bottom: 5vh
+	font-family: $font-p
+	font-size: 1.2em
+	width: 150px
+	margin-top: 2vh
+	outline-offset: 0
+	outline: none
+	&:visited
+		outline: none
+		outline-offset: 0
+		
+#get-joke
+	outline: none
+		
+
+
+p
+	font-family: $font-p
+	font-size: 1.3em
+	margin-top: 20px
+	margin-bottom: 20px
+	
+.box50
+	padding-top: 50px
+	
+.btn:hover .head
+	@include rotate(45deg)
+	
+
+
+
+/*MIKE*/
+	
+
+#mike  
+	margin: 0
+	position: relative
+	height: 200px
+	width: 150px
+	display: inline-block
+  
+	div  
+		position: absolute
+  
+  
+	div::before, div::after 
+		content: ''
+		position: absolute
+		display: block
+  
+  
+.head
+	width: 61.622px
+	height: 60.622px
+	background-color: $color-darkGray
+	border-radius: 50%
+	left: 32.939px
+	top: 24.899px
+	&::before
+		width: 33.99px
+		height: 30.83px
+		border-radius: 50% / 60% 60% 40% 40%
+		background-color: white
+		left: 13.82px
+		top: 10.05px
+  
+	&::after
+		width: 7.59px
+		height: 9.89px
+		border-radius: 50%
+		background-color: $color-darkGray
+		left: 26.69px
+		top: 23.92px
+   
+.horns
+	top: 26.4px
+	&::before
+		width: 12px
+		height: 12px
+		border-top-left-radius: 48px
+		background-color: $color-red    
+		left: 33.75px
+		@include rotate(-45deg)
+  
+	&::after
+		width: 12px
+		height: 12px
+		border-top-right-radius: 48px
+		background-color: $color-red    
+		left: 82.11px
+		@include rotate(45deg)
+
+
+.smile
+	width: 36.99px
+	height: 33.83px
+	border-radius: 50% / 60% 60% 40% 40%
+	border: solid 4px transparent
+	border-top: solid 1.5px transparent  
+	left: 42.35px
+	top: 31.25px
+	&::before
+		width: 49.946px  
+		height: 49.946px
+		border-radius: 50%
+		border-top: solid 1.5px transparent
+		border-left: solid 1.5px transparent
+		border-bottom: solid 1.5px white
+		border-right: solid 1.5px white
+		left: -7.5px
+		top: -3px
+		@include rotate(45deg)
+
+	&::after
+		width: 5.762px
+		height: 3.25px
+		border-radius: 50%
+		background-color: $color-pink
+		box-shadow: 49px 0px $color-pink
+		top: 20px
+		left: -9px
+
+.arms
+	z-index: -1
+	width: 54.087px
+	height: 27.043px
+	border-radius: 50%
+	border: solid 7px $color-lightGray
+	top: 47.5px
+	left: 21px
+	@include rotate(-28deg)
+	
+	&::before 
+		width: 54.087px
+		height: 27.043px
+		border-radius: 50%
+		border: solid 7px $color-lightGray   
+		top: 9px
+		left: 22px
+		@include rotate(56deg) 
+  
+	&::after
+		width: 8.163px     
+		height: 8.163px
+		border-radius: 50%
+		background-color: $color-lightGray
+		box-shadow: 42.5px 22px $color-lightGray
+		top: 16px
+		left: 0.5px       
+  
+
+.legs 
+	z-index: -1
+	width: 97.5px
+	height: 9.5px
+	border-radius: 50%
+	background-color: $color-creamGray
+	top: 102px
+	left: 17px
+	&::before
+		height: 27.04px
+		width: 20px
+		border-radius: 50% 
+		border: solid 7px $color-lightGray
+		border-bottom: solid 13px transparent
+		top: -20px  
+		left: 39.25px
+  
+	&::after
+		width: 15.249px
+		height: 7.625px
+		border-radius: 30px 30px 0 0
+		background-color: $color-lightGray
+		box-shadow: 16.75px 0 $color-lightGray
+		top: -2.6px
+		left: 30.5px
+		
+#mike1, #mike2
+	@extend #mike
+	
+
+.dotted 
+	padding: 7vh 100vw
+	background-image: -webkit-repeating-radial-gradient(center center, rgba(77, 77, 77, .7), rgba(77, 77, 77, .7) 2.7px, transparent 2.7px, transparent 100%)
+	background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%)
+	background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%)
+	background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 2px, transparent 2px, transparent 100%)
+	-webkit-background-size: 15px 15px
+	-moz-background-size: 15px 15px
+	background-size: 15px 15px
+	bottom: 0
+	margin: 35px 0
+	
+.dotted1
+
+	padding: 4vh 100vw
+	background-image: -webkit-repeating-radial-gradient(center center, rgba(77, 77, 77, .7), rgba(77, 77, 77, .7) 2.7px, transparent 2.7px, transparent 100%)
+	background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%)
+	background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%)
+	background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 2px, transparent 2px, transparent 100%)
+	-webkit-background-size: 15px 15px
+	-moz-background-size: 15px 15px
+	background-size: 15px 15px
+
+	margin: 0
+ 
+ 
+  
+
+
+/*Footer*/
+
+footer
+	p
+		font-weight: bold
+	
+	
+
+
+
+
+
+
+
