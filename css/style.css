@@ -45,7 +45,7 @@ h2 {
   flex: 1; }
 
 .container {
-  width: 1300px;
+  max-width: 1300px;
   margin-top: 3vh;
   min-height: calc(100vh - 572px); }
 
@@ -122,6 +122,18 @@ p {
     background-color: #333;
     left: 26.69px;
     top: 23.92px; }
+
+.eye::after, .eagle-eye::after {
+  width: 7.59px;
+  height: 9.89px;
+  border-radius: 50%;
+  background-color: #333;
+  left: 26.69px;
+  top: 23.92px;
+  transform: rotate(45deg); }
+
+.eagle-eye::after {
+  transform: rotate(-45deg); }
 
 .horns {
   top: 26.4px; }
@@ -240,11 +252,11 @@ p {
     left: 30.5px; }
 
 .dotted {
-  padding: 7vh 100vw;
+  padding: 7vh 25vw;
   background-image: -webkit-repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
-  background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-  background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-  background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 2px, transparent 2px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
   -webkit-background-size: 15px 15px;
   -moz-background-size: 15px 15px;
   background-size: 15px 15px;
@@ -252,11 +264,11 @@ p {
   margin: 35px 0; }
 
 .dotted1 {
-  padding: 4vh 100vw;
+  padding: 4vh 25vw;
   background-image: -webkit-repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
-  background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-  background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
-  background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 2px, transparent 2px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(77, 77, 77, 0.7), rgba(77, 77, 77, 0.7) 2.7px, transparent 2.7px, transparent 100%);
   -webkit-background-size: 15px 15px;
   -moz-background-size: 15px 15px;
   background-size: 15px 15px;
@@ -265,5 +277,9 @@ p {
 /*Footer */
 footer p {
   font-weight: bold; }
+
+@media (max-width: 1040px) {
+  .box {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */

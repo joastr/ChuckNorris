@@ -26,4 +26,23 @@ $(document).ready(function(){
     	$(".head").css("transform", "rotate(-45deg)");
 		
     });
+}); 
+
+/*
+$(document).ready(function(){
+	$('#get-joke').hover(function() {
+		$('.head').append("<style>.head::after{ transform: 'rotate(45deg)' }</style>");
+	}, function() {
+		$('.head').append("<style>.head::after{ transform: 'rotate(-45deg)' }</style>");
+	});
+}); 
+
+
+$(document).ready(function() {
+	$('#get-joke').hover(function() {
+		$('.head').addClass('eye');
+	}, function() {
+		$('.head').addClass('eagle-eye');
+	});
 });
+*/		
