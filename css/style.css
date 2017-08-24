@@ -80,13 +80,6 @@ p {
 .box50 {
   padding-top: 50px; }
 
-.btn:hover .head {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
-
 /*MIKE */
 #mike, #mike1, #mike2 {
   margin: 0;
@@ -123,21 +116,22 @@ p {
     left: 26.69px;
     top: 23.92px; }
 
-.eye::after, .eagle-eye::after {
+.eye::after {
   width: 7.59px;
   height: 9.89px;
   border-radius: 50%;
   background-color: #333;
   left: 26.69px;
   top: 23.92px;
-  transform: rotate(45deg); }
+  transform: rotate(45deg);
+  transform: scale(1.5); }
 
-.eagle-eye::after {
-  transform: rotate(-45deg); }
-
+/*.eagle-eye::after
+ * @extend .eye::after
+ * transform: rotate(-45deg) */
 .horns {
   top: 26.4px; }
-  .horns::before {
+  .horns::before, .horns-l-hover::before {
     width: 12px;
     height: 12px;
     border-top-left-radius: 48px;
@@ -148,7 +142,7 @@ p {
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-  .horns::after {
+  .horns::after, .horns-r-hover::after {
     width: 12px;
     height: 12px;
     border-top-right-radius: 48px;
@@ -159,6 +153,16 @@ p {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg); }
+
+.horns-l-hover::before {
+  height: 30px;
+  left: 30px;
+  top: -15px; }
+
+.horns-r-hover::after {
+  height: 30px;
+  left: 85px;
+  top: -15px; }
 
 .smile {
   width: 36.99px;

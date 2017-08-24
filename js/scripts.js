@@ -18,15 +18,32 @@ function getJoke() {
 		
 };
 
-
+/*
 $(document).ready(function(){
     $("#get-joke").hover(function(){
-        $(".head").css("transform", "rotate(45deg)");
+        $(".head").css("transform", "rotate(90deg)");
     }, function(){
-    	$(".head").css("transform", "rotate(-45deg)");
+    	$(".head").css("transform", "rotate(-90deg)");
 		
     });
 }); 
+*/
+$(document).ready(function() {
+	$('#get-joke').hover(function() {
+		$('.horns').addClass('horns-l-hover');
+	}, function() {
+		$('.horns').removeClass('horns-l-hover');	
+	});
+});
+
+
+$(document).ready(function() {
+	$('#get-joke').hover(function() {
+		$('.horns').addClass('horns-r-hover');
+	}, function() {
+		$('.horns').removeClass('horns-r-hover');
+	});
+});
 
 /*
 $(document).ready(function(){
@@ -37,12 +54,12 @@ $(document).ready(function(){
 	});
 }); 
 
-
+*/
 $(document).ready(function() {
 	$('#get-joke').hover(function() {
 		$('.head').addClass('eye');
 	}, function() {
-		$('.head').addClass('eagle-eye');
+		$('.head').removeClass('eye');
 	});
 });
-*/		
+	

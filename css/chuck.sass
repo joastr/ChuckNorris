@@ -114,8 +114,7 @@ p
 .box50
 	padding-top: 50px
 	
-.btn:hover .head
-	@include rotate(45deg)
+
 	
 
 
@@ -171,10 +170,12 @@ p
 	left: 26.69px
 	top: 23.92px
 	transform: rotate(45deg)
+	transform: scale(1.5)
+	
 
-.eagle-eye::after
+/*.eagle-eye::after
 	@extend .eye::after
-	transform: rotate(-45deg)
+	transform: rotate(-45deg)*/
 	
    
 .horns
@@ -194,6 +195,19 @@ p
 		background-color: $color-red    
 		left: 82.11px
 		@include rotate(45deg)
+
+
+.horns-l-hover::before
+	@extend .horns::before
+	height: 30px
+	left: 30px
+	top: -15px
+	
+.horns-r-hover::after
+	@extend .horns::after
+	height: 30px
+	left: 85px
+	top: -15px
 
 
 .smile
