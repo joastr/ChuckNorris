@@ -1,6 +1,26 @@
 // JavaScript Document
 
 var url = 'http://api.icndb.com/jokes/random';
+var button = document.querySelector('#get-joke');
+var paragraph = document.querySelector('#joke');
+
+window.getJoke();
+button.addEventListener('click',function(){
+	getJoke();
+});
+
+function getJoke() {
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', url);
+	xhr.addEventListener('load', function(){
+	  var response = JSON.parse(xhr.response);
+	  paragraph.innerHTML = response.value.joke;
+	});
+	xhr.send();
+  }
+
+
+/*----------------------------JQUERY----------
 
 var button = $('#get-joke').click(function() {
 	getJoke();
@@ -17,17 +37,9 @@ function getJoke() {
 	});
 		
 };
-
-/*
-$(document).ready(function(){
-    $("#get-joke").hover(function(){
-        $(".head").css("transform", "rotate(90deg)");
-    }, function(){
-    	$(".head").css("transform", "rotate(-90deg)");
-		
-    });
-}); 
 */
+
+/*------------------------------------------------------ANIMATION----------------------------------*/
 $(document).ready(function() {
 	$('#get-joke').hover(function() {
 		$('.horns').addClass('horns-l-hover');
@@ -45,16 +57,6 @@ $(document).ready(function() {
 	});
 });
 
-/*
-$(document).ready(function(){
-	$('#get-joke').hover(function() {
-		$('.head').append("<style>.head::after{ transform: 'rotate(45deg)' }</style>");
-	}, function() {
-		$('.head').append("<style>.head::after{ transform: 'rotate(-45deg)' }</style>");
-	});
-}); 
-
-*/
 $(document).ready(function() {
 	$('#get-joke').hover(function() {
 		$('.head').addClass('eye');
